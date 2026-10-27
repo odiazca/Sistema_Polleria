@@ -1,0 +1,83 @@
+==============================================================
+  POLLERIA POS - CREDENCIALES DEL SISTEMA   (version 2.6.0)
+==============================================================
+IMPORTANTE: son los valores por defecto del instalador.
+Si al instalar escribio otro usuario o clave, use esos.
+Cambie todas las contrasenas antes de trabajar con datos reales
+y no comparta este archivo por chats abiertos.
+
+--------------------------------------------------------------
+1) ACCESO AL SISTEMA (login)
+--------------------------------------------------------------
+URL local (Laragon) ..: http://sys_polleria.test/
+URL alterna ..........: http://localhost/sys_polleria/
+Desde celular (WiFi) .: http://IP-DE-LA-PC/sys_polleria/   (ej. 192.168.1.20)
+
+ADMINISTRADOR (acceso total, IA, copias y configuracion)
+  Usuario ..: admin
+  Clave ....: admin123
+
+USUARIOS DE DEMOSTRACION (solo si activo "datos de demostracion")
+  Cajero ...: cajero  /  cajero123   (Rosa Gutierrez)
+  Mozo .....: mozo    /  mozo123     (Miguel Torres)
+  Cocina ...: cocina  /  cocina123   (Chef Andres Paredes)
+
+Para eliminar o cambiar usuarios: menu Usuarios y roles.
+Para cambiar su propia clave: menu superior > su perfil.
+
+--------------------------------------------------------------
+2) BASE DE DATOS (MySQL en Laragon)
+--------------------------------------------------------------
+Servidor .....: localhost
+Puerto .......: 3306
+Usuario ......: root
+Contrasena ...: (vacia)
+Base de datos : sys_polleria   (se crea sola con install.php)
+phpMyAdmin ...: Laragon > Base de datos  /  http://localhost/phpmyadmin
+Archivo de conexion: config/config.php
+
+--------------------------------------------------------------
+3) PAGINAS Y ENLACES DEL SISTEMA
+--------------------------------------------------------------
+Instalador ...........: http://sys_polleria.test/install.php
+                        (en hosting, BORRELO despues de instalar)
+Reservas en linea ....: http://sys_polleria.test/index.php?r=reservar/index
+Carta digital (QR) ...: se imprime por mesa desde el modulo Mesas
+Copia automatica .....: backup_cron.php (Programador de tareas / Cron)
+
+--------------------------------------------------------------
+4) SERVICIOS EXTERNOS (se configuran dentro del sistema)
+--------------------------------------------------------------
+Facturacion SUNAT (Nubefact)
+  Menu: Facturacion electronica. Modo inicial: SIMULADO.
+  Para produccion: URL de la API y TOKEN que entrega Nubefact.
+  URL ...: ______________________________
+  Token .: ______________________________
+
+Asistente IA / Chat IA (Gemini gratis)
+  Menu: Asistente IA > Configurar IA (solo administrador).
+  Clave gratuita en: https://aistudio.google.com/apikey
+  Clave API .: ______________________________  (se guarda cifrada)
+
+--------------------------------------------------------------
+5) HOSTING WEB (complete cuando lo contrate)
+--------------------------------------------------------------
+Proveedor / panel ..: ______________________________
+Dominio ............: ______________________________
+Usuario del panel ..: ______________________________
+Clave del panel ....: ______________________________
+FTP usuario / clave : ______________________________
+Base de datos ......: ______________________________   (con prefijo, ej. u123456789_polleria)
+Usuario de la BD ...: ______________________________
+Clave de la BD .....: ______________________________
+Servidor de la BD ..: localhost
+
+--------------------------------------------------------------
+6) RECOMENDACIONES DE SEGURIDAD
+--------------------------------------------------------------
+- Use claves de 10 o mas caracteres con letras, numeros y simbolos.
+- Un usuario por persona; no compartir el usuario admin.
+- Desactive o elimine los usuarios de demostracion.
+- En hosting: APP_DEBUG en false y SSL (https) activo.
+- Descargue copias de seguridad y guardelas fuera del servidor.
+==============================================================
